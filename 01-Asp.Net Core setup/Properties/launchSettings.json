@@ -1,18 +1,18 @@
 ﻿{
   "iisSettings": {
-    "windowsAuthentication": false,
+    "windowsAuthentication": true,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:16883",
+      "applicationUrl": "http://localhost:4100",
       "sslPort": 0
     }
   },
   "profiles": {
-    "_01_Asp.Net_Core_setup": {
+    "MYAPPServerKestral": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
-      "applicationUrl": "http://localhost:5194",
+      "applicationUrl": "http://localhost:4000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
