@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02-MiddleWares", "02-Middle
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiddleWearsAssignment", "MiddleWearsAssignment\MiddleWearsAssignment.csproj", "{AA97540D-9D3E-4EAE-BF1A-DB7795A9FCDF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-ASp.NetRouting", "04-ASp.NetRouting\04-ASp.NetRouting.csproj", "{F9741B6C-5E5E-41EE-9EDC-61D875175435}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{AA97540D-9D3E-4EAE-BF1A-DB7795A9FCDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA97540D-9D3E-4EAE-BF1A-DB7795A9FCDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA97540D-9D3E-4EAE-BF1A-DB7795A9FCDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9741B6C-5E5E-41EE-9EDC-61D875175435}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9741B6C-5E5E-41EE-9EDC-61D875175435}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9741B6C-5E5E-41EE-9EDC-61D875175435}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9741B6C-5E5E-41EE-9EDC-61D875175435}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
