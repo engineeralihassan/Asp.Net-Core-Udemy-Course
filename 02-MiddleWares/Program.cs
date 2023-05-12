@@ -1,5 +1,3 @@
-using _02_MiddleWares.NewFolder;
-
 namespace _02_MiddleWares
 {
     public class Program
@@ -7,7 +5,7 @@ namespace _02_MiddleWares
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            builder.Services.AddTransient<MiddleWareClass1>(); // custom Middle ware class 
+            builder.Services.AddTransient<MiddleWareClass1>(); // custom Middle ware class
             var app = builder.Build();
             // Midle ware simple
             //app.Run(async (HttpContext context) =>
@@ -24,36 +22,69 @@ namespace _02_MiddleWares
                     "from the first middle ware </p>");
                 await next(context);
             });
-            app.Use(async (HttpContext context1, RequestDelegate next) =>
-            {
-                await context1.Response.WriteAsync("<p>Hello Ali This responce " +
-                    "from the second middle ware </p>");
-                await next(context1);
-                await context1.Response.WriteAsync("<p>Hello Ali This responce " +
-              "ater the 2nd Last request completes  </p>");
-
-            });
-            // We used hee the custome middle ware to execute as next middle where 
+            //app.Use(async (HttpContext context1, RequestDelegate next) =>
+            //{
+            //    await context1.Response.WriteAsync("<p>Hello Ali This responce " +
+            //        "from the second middle ware </p>");
+            //    await next(context1);
+            //    await context1.Response.WriteAsync("<p>Hello Ali This responce " +
+            //  "ater the 2nd Last request completes  </p>");
+            //});
+            // We used hee the custome middle ware to execute as next middle where
             // and this class is execute the next middle also
             //   app.UseMiddleware<MiddleWareClass1>(); // syntax for used the middle ware class
             // This is the way to use the extension method as a middle wear
+            // Use when Middle ware ##############
+            app.UseWhen(context => context.Request.Query.ContainsKey("name"),
+app =>
+{
+    app.Use(async (HttpContext context, RequestDelegate next) =>
+    {
+        await context.Response.WriteAsync("<h1>The User name is available</h1>");
+        await next(context);
+    });
+});
+            // MidelWare Custome class 
 
-            app.UseMiddleWareClass1();
-            app.UseMiddlewareConvension();
-            app.Use(async (context2, next) =>
-            {
-                await context2.Response.WriteAsync("<p>Hello Ali This responce " +
-                    "from the Third middle ware </p>");
-                await next(context2);
-                await context2.Response.WriteAsync("<p>Hello Ali This responce " +
-               "ater the end request completes  </p>");
-            });
+            //  app.UseMiddleWareClass1();
+
+            // MidelWare Custome class Convension
+
+            // app.UseMiddlewareConvension();
+
+
+            //app.Use(async (context2, next) =>
+            //{
+            //    await context2.Response.WriteAsync("<p>Hello Ali This responce " +
+            //        "from the Third middle ware </p>");
+            //    await next(context2);
+            //    await context2.Response.WriteAsync("<p>Hello Ali This responce " +
+            //   "ater the end request completes  </p>");
+            //});
             // Terminatee the middle ware chain
+
+            // Map
+
+            app.Map("/name", adminApp =>
+            {
+                app.Use(async (HttpContext context, RequestDelegate next) =>
+                {
+                    await context.Response.WriteAsync("<h1>The Admin Midlle ware is called</h1>");
+                    await next(context);
+                });
+            });
+
+            app.Map("/api", apiApp =>
+            {
+                app.UseMiddleWareClass1();
+            });
+
+
+
             app.Run(async (HttpContext context) =>
             {
                 await context.Response.WriteAsync("<p>This is the End of the Middle wares Pipeline </p>");
             });
-
 
             app.Run();
         }
