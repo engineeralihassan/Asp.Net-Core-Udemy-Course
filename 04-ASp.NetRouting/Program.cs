@@ -49,63 +49,84 @@ namespace _04_ASp.NetRouting
             //});
             //
             //   ################################################# Route parameters | defualt parameters | optional parameters
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.Map("/files/{filename=data}.{extension=pdf}", async context =>
+            //    {
+            //        string? name = Convert.ToString(context.Request.RouteValues["filename"]);
+            //        string? extension = Convert.ToString(context.Request.RouteValues["extension"]);
+
+
+            //        context.Response.Headers["Content-Type"] = "text/html";
+            //        await context.Response.WriteAsync($"<h1>The File is {name} - {extension} </h1>");
+
+            //    });
+            //    endpoints.Map("/profiles/profile/{name=AliHassan }", async context =>
+            //    {
+            //        string? name = Convert.ToString(context.Request.RouteValues["name"]);
+
+
+
+            //        context.Response.Headers["Content-Type"] = "text/html";
+            //        await context.Response.WriteAsync($"<h1>The Employ is {name} </h1>");
+
+            //    });
+
+            //    endpoints.Map("/users/user/{name?}", async context =>
+            //    {
+            //        string? name = "";
+            //        if (context.Request.RouteValues.ContainsKey("name"))
+            //        {
+            //            name = Convert.ToString(context.Request.RouteValues["name"]);
+            //            await context.Response.WriteAsync($"<h1>The Employ: {name}  : Avaliable </h1>");
+            //        }
+            //        else
+            //        {
+            //            await context.Response.WriteAsync($"<h1>The Employ: {name} : Not available </h1>");
+            //        }
+
+
+
+
+            //        context.Response.Headers["Content-Type"] = "text/html";
+            //        await context.Response.WriteAsync($"<h1>The Employ is {name} </h1>");
+
+            //    });
+            //   ################################################# Route Constrants 
+
+            app.Use(async (HttpContext context, RequestDelegate next) =>
+            {
+                await context.Response.WriteAsync($"<p>The App is start to Run MiddleWears</p>");
+
+                next(context);
+            });
             app.UseEndpoints(endpoints =>
             {
-                endpoints.Map("/files/{filename=data}.{extension=pdf}", async context =>
+
+                endpoints.Map("reports/report/{day:datetime}", async context =>
                 {
-                    string? name = Convert.ToString(context.Request.RouteValues["filename"]);
-                    string? extension = Convert.ToString(context.Request.RouteValues["extension"]);
+                    DateTime date = Convert.ToDateTime(context.Request.RouteValues["day"]);
+                    await context.Response.WriteAsync($"<h1>Report of : {date} </h1>");
+                });
+                // guid 
+                endpoints.Map("students/student/{id:guid}", async (context) =>
+                {
+                    Guid id = Guid.Parse(Convert.ToString(context.Request.RouteValues["id"]));
+                    await context.Response.WriteAsync($"<h1>Student id is :  {id} </h1>");
+                });
+                // lengthhasssan
+                endpoints.Map("students/{name:length(2,15)=Ali Hassan}", async (context) =>
+                {
+                    string student = Convert.ToString(context.Request.RouteValues["name"]);
 
 
-                    context.Response.Headers["Content-Type"] = "text/html";
-                    await context.Response.WriteAsync($"<h1>The File is {name} - {extension} </h1>");
+                    await context.Response.WriteAsync($"<h1>Student  is : {student} </h1>");
+
 
                 });
-                endpoints.Map("/profiles/profile/{name=AliHassan }", async context =>
+                endpoints.Map("students/student/{id}", async context =>
                 {
-                    string? name = Convert.ToString(context.Request.RouteValues["name"]);
-
-
-
-                    context.Response.Headers["Content-Type"] = "text/html";
-                    await context.Response.WriteAsync($"<h1>The Employ is {name} </h1>");
-
-                });
-
-                endpoints.Map("/users/user/{name?}", async context =>
-                {
-                    string? name = "";
-                    if (context.Request.RouteValues.ContainsKey("name"))
-                    {
-                        name = Convert.ToString(context.Request.RouteValues["name"]);
-                        await context.Response.WriteAsync($"<h1>The Employ: {name}  : Avaliable </h1>");
-                    }
-                    else
-                    {
-                        await context.Response.WriteAsync($"<h1>The Employ: {name} : Not available </h1>");
-                    }
-
-
-
-
-                    context.Response.Headers["Content-Type"] = "text/html";
-                    await context.Response.WriteAsync($"<h1>The Employ is {name} </h1>");
-
-                });
-
-
-
-
-
-
-
-                endpoints.MapGet("/admin", async context =>
-                {
-                    await context.Response.WriteAsync("<h1>Wecome Mr Admin</h1>");
-                });
-                endpoints.MapPost("/client", async context =>
-                {
-                    await context.Response.WriteAsync("<h1>Wecome Mr Admin</h1>");
+                    await context.Response.WriteAsync($"<h1>We could not found student  ID</h1>");
                 });
             });
             // Last middle wear 
