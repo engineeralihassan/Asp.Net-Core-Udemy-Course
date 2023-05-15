@@ -5,6 +5,17 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>_04_ASp.NetRouting</RootNamespace>
+    <StartupObject>_04_ASp.NetRouting.WEbRoutes_StaticFiles</StartupObject>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="myfiles\file.xlsx" />
+    <Content Include="myfiles\img.png" />
+    <Content Include="mywebroot\img2.jpeg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
 
 </Project>

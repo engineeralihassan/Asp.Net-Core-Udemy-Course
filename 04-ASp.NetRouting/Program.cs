@@ -5,6 +5,11 @@ namespace _04_ASp.NetRouting
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            // Cutome constraint class 
+            builder.Services.AddRouting(option =>
+            {
+                option.ConstraintMap.Add("months", typeof(CustomeConstrainsts_Class));
+            });
             var app = builder.Build();
             // ########################################################### GetEndPoints()
             // End points befor UseRouting()= null always
@@ -107,6 +112,24 @@ namespace _04_ASp.NetRouting
                 {
                     DateTime date = Convert.ToDateTime(context.Request.RouteValues["day"]);
                     await context.Response.WriteAsync($"<h1>Report of : {date} </h1>");
+                });
+                // Cutome constraint class 
+
+                endpoints.Map("salary/{month=july}", async context =>
+                {
+
+                    await context.Response.WriteAsync($"<h1>Salary  of : july </h1>");
+
+
+                });
+                // Selection order of routes 
+                // its higher priority then then others 
+                endpoints.Map("salary/july", async context =>
+                {
+
+                    await context.Response.WriteAsync($"<h1>Salary  of : july </h1>");
+
+
                 });
                 // guid 
                 endpoints.Map("students/student/{id:guid}", async (context) =>
