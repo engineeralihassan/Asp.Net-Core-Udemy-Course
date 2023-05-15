@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "002AssignmentHeaders", "Ass
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02-MiddleWares", "02-MiddleWares\02-MiddleWares.csproj", "{78FA64FE-9949-4D93-AE65-EA574CB4C822}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiddleWearsAssignment", "MiddleWearsAssignment\MiddleWearsAssignment.csproj", "{AA97540D-9D3E-4EAE-BF1A-DB7795A9FCDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiddleWearsAssignment", "MiddleWearsAssignment\MiddleWearsAssignment.csproj", "{AA97540D-9D3E-4EAE-BF1A-DB7795A9FCDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-ASp.NetRouting", "04-ASp.NetRouting\04-ASp.NetRouting.csproj", "{F9741B6C-5E5E-41EE-9EDC-61D875175435}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04-ASp.NetRouting", "04-ASp.NetRouting\04-ASp.NetRouting.csproj", "{F9741B6C-5E5E-41EE-9EDC-61D875175435}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05-Controllers", "05-Controllers\05-Controllers.csproj", "{D0ECBB7E-4082-488C-9020-4FD8D02527DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{F9741B6C-5E5E-41EE-9EDC-61D875175435}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9741B6C-5E5E-41EE-9EDC-61D875175435}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9741B6C-5E5E-41EE-9EDC-61D875175435}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0ECBB7E-4082-488C-9020-4FD8D02527DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0ECBB7E-4082-488C-9020-4FD8D02527DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0ECBB7E-4082-488C-9020-4FD8D02527DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0ECBB7E-4082-488C-9020-4FD8D02527DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
