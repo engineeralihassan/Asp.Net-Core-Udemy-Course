@@ -48,8 +48,11 @@ namespace _05_Controllers.Controllers
             // await Task.Delay(2000);
 
 
-            // Redirect to the "BookStor" action in the "Store" controller
-            return RedirectToActionPermanent("BookStor", "Store", new { id = 123 });
+            //// Redirect to the "BookStor" action in the "Store" controller
+            //return RedirectToActionPermanent("BookStor", "Store", new { id = 123 });
+            // return LocalRedirect("hello/hy");
+            return LocalRedirectPermanent("hello/hy");
+
 
         }
     }

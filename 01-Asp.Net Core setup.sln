@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiddleWearsAssignment", "Mi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04-ASp.NetRouting", "04-ASp.NetRouting\04-ASp.NetRouting.csproj", "{F9741B6C-5E5E-41EE-9EDC-61D875175435}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05-Controllers", "05-Controllers\05-Controllers.csproj", "{D0ECBB7E-4082-488C-9020-4FD8D02527DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05-Controllers", "05-Controllers\05-Controllers.csproj", "{D0ECBB7E-4082-488C-9020-4FD8D02527DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06-ModelBinding_Validations", "06-ModelBinding_Validations\06-ModelBinding_Validations.csproj", "{15D09144-54D6-4EF2-B896-27BA7881F09C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{D0ECBB7E-4082-488C-9020-4FD8D02527DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0ECBB7E-4082-488C-9020-4FD8D02527DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0ECBB7E-4082-488C-9020-4FD8D02527DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15D09144-54D6-4EF2-B896-27BA7881F09C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15D09144-54D6-4EF2-B896-27BA7881F09C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15D09144-54D6-4EF2-B896-27BA7881F09C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15D09144-54D6-4EF2-B896-27BA7881F09C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
