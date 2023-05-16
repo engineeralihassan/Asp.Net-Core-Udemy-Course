@@ -39,6 +39,30 @@ namespace _06_ModelBinding_Validations.Controllers
             return Content($"<h1>The Book is Found  :  [{bookname}] : [{bookid}] </h1>", "text/html");
 
         }
+        // From Route and From Query 
+        [Route("users/user/{userid?}")]
+        public IActionResult Users([FromRoute] int userid)
+        {
+            if (userid > 0)
+            {
+                return Content($"<h1>The user is Found :  [{userid}] </h1>", "text/html");
+            }
+
+            return Content($"<h1>The user is not available with this id   : [{userid}] </h1>", "text/html");
+
+        }
+        // FromQuery 
+        [Route("sellers/seller")]
+        public IActionResult Users(string name)
+        {
+            if (!string.IsNullOrEmpty(name))
+            {
+                return Content($"<h1>The user is Found :  [{name}] </h1>", "text/html");
+            }
+
+            return Content($"<h1>The user is not available with this name  : [{name}] </h1>", "text/html");
+
+        }
 
     }
 }
