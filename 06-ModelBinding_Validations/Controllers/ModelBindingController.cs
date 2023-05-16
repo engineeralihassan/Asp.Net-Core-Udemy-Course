@@ -1,4 +1,5 @@
 ﻿
+using _06_ModelBinding_Validations.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace _06_ModelBinding_Validations.Controllers
@@ -53,7 +54,7 @@ namespace _06_ModelBinding_Validations.Controllers
         }
         // FromQuery 
         [Route("sellers/seller")]
-        public IActionResult Users(string name)
+        public IActionResult Users([FromQuery] string name)
         {
             if (!string.IsNullOrEmpty(name))
             {
@@ -61,6 +62,23 @@ namespace _06_ModelBinding_Validations.Controllers
             }
 
             return Content($"<h1>The user is not available with this name  : [{name}] </h1>", "text/html");
+
+        }
+        /// Travel planing  
+        // Model Class Binding with the controller and initilialize the value peroperties
+        // Medicine online app / search and order online with diffrent specific details // from nearest medical store 
+        // find qadvisor app // lke find any kind of advisor property advisor clicnic / layer / any thing 
+
+
+        [Route("shopkepers/shopkeper/{Id}/{Name?}")]
+        public IActionResult Shopkeper(int? id, string name, Book book)
+        {
+            if (id.HasValue == false)
+            {
+                return Content($"<h1>The Shopkeper id  :  [{id}] Name : [{name}] </h1>", "text/html");
+            }
+
+            return Content($"<h1>The Shopkeper not found   :  [{id}] Name : [{name}]  </h1>", "text/html");
 
         }
 
