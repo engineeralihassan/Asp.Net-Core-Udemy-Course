@@ -19,6 +19,9 @@ namespace _07_ModelValidations.Models
         public int? age { get; set; }
         [CustomerCustomeValidator(2005, ErrorMessage = "The Year is must be greater then 2002")]
         public DateTime dob { get; set; }
+
+        public DateTime? From { get; set; }
+        public DateTime? Todate { get; set; }
         public override string ToString()
         {
             return $"Id: {Id} name : {Name} email: {email} Age : {age} date=of-birth :{dob} ";
