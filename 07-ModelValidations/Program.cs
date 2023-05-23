@@ -5,7 +5,14 @@ namespace _07_ModelValidations
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            builder.Services.AddControllers();
+            // add model binder provider service 
+            builder.Services.AddControllers(//option =>
+                                            // {
+                                            //  option.ModelBinderProviders.Insert(0, new ModelBinderProvider());
+                                            //});)
+            );
+            // it help to read the data in the form of XML object and bindf this 
+            builder.Services.AddControllers().AddXmlSerializerFormatters();
             var app = builder.Build();
             app.UseRouting();
             app.UseStaticFiles();
