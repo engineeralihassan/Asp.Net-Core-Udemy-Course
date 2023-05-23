@@ -1,5 +1,46 @@
-﻿@{
+﻿@using _08RazorViews.Models
+@{
     string title = "Wellcome to razore views is Asp.Net core ";
+    Shop shop = new Shop()
+            {
+                Id = 12,
+                Name = "Akbar kiryana Stor",
+                Description = "City No 1 Kiryana stro prices are very low sales are open ",
+                startDate = Convert.ToDateTime("2002-10-12")
+            };
+    List<Shop> shops = new List<Shop>()
+    {
+        new Shop()
+            {
+                Id = 1212,
+                Name = "Bata shoes",
+                Description = "City No 1 Kiryana stro prices are very low sales are open ",
+                startDate = Convert.ToDateTime("2002-10-12")
+            },
+               new Shop()
+            {
+                Id = 12,
+                Name = "Akbar kiryana Stor",
+                Description = "City No 1 Kiryana stro prices are very low sales are open ",
+                startDate = Convert.ToDateTime("2002-10-12")
+            },
+               new Shop()
+            {
+                Id = 12,
+                Name = "Akbar kiryana Stor",
+                Description = "City No 1 Kiryana stro prices are very low sales are open ",
+                startDate = Convert.ToDateTime("2002-10-12")
+            },
+               new Shop()
+            {
+                Id = 12,
+                Name = "Akbar kiryana Stor",
+                Description = "City No 1 Kiryana stro prices are very low sales are open ",
+                startDate = Convert.ToDateTime("2002-10-12")
+            },
+
+    };
+
 }
 
 <!Doctype html>
@@ -10,5 +51,41 @@
     </head>
     <body>
         <h1>@title </h1>
+        <h3> Id : @shop.Id Name : @shop.Name  Details  @shop.Description</h3>
+        <h5>The Totals age is Days </h5>
+    @{
+      double age=  Math.Round((DateTime.Now - shop.startDate).TotalDays/365);
+
+    }
+    @if(shop.Name != " ")
+    {
+        string massage = "Sorry we could not find any Shop";
+        <h5>@massage</h5>
+    }
+    else
+    {
+        <h3>You Shop is Registers as : @shop.Name</h3>
+    }
+    <h3>@age</h3>
+    @switch (age)
+    {
+        case 18:
+            <p>You are able to Vote This Year</p>
+            ;
+            break;
+        case <18:
+            <p>You are not  able to Vote This Year</p>
+            ;
+            break;
+        case >18:
+            <p>You are senior citizen vote always</p>
+            ;
+            break;
+    }
+    @foreach(var s in shops)
+    {
+        <p> id : @s.Id Name : @s.Name</p>
+    }
+
     </body>
 </html>
