@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05-Controllers", "05-Contro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06-ModelBinding_Validations", "06-ModelBinding_Validations\06-ModelBinding_Validations.csproj", "{15D09144-54D6-4EF2-B896-27BA7881F09C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07-ModelValidations", "07-ModelValidations\07-ModelValidations.csproj", "{E0E8B936-1287-4051-8CF7-1426DA483B3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07-ModelValidations", "07-ModelValidations\07-ModelValidations.csproj", "{E0E8B936-1287-4051-8CF7-1426DA483B3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08RazorViews", "08RazorViews\08RazorViews.csproj", "{E7F06E1D-50E9-407A-8AFD-81D6CAC9DEEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{E0E8B936-1287-4051-8CF7-1426DA483B3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0E8B936-1287-4051-8CF7-1426DA483B3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0E8B936-1287-4051-8CF7-1426DA483B3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7F06E1D-50E9-407A-8AFD-81D6CAC9DEEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7F06E1D-50E9-407A-8AFD-81D6CAC9DEEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7F06E1D-50E9-407A-8AFD-81D6CAC9DEEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7F06E1D-50E9-407A-8AFD-81D6CAC9DEEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
