@@ -42,7 +42,19 @@
     };
 
 }
-
+@{
+    double? GetAge(DateTime? dob)
+    {
+        if(dob is not null){
+            return Math.Round((DateTime.Now - dob.Value).TotalDays/365.34);
+        }
+        else
+        {
+            return null;
+        }
+    }
+    string alertMessage = $"<script>alert('Hello this is alert:  {shops.Count} ')</script>";
+}
 <!Doctype html>
 <html>
     <head>
@@ -50,6 +62,7 @@
         <title>@title</title>
     </head>
     <body>
+        @Html.Raw(alertMessage);
         <h1>@title </h1>
         <h3> Id : @shop.Id Name : @shop.Name  Details  @shop.Description</h3>
         <h5>The Totals age is Days </h5>
@@ -84,8 +97,16 @@
     }
     @foreach(var s in shops)
     {
+       
         <p> id : @s.Id Name : @s.Name</p>
     }
+    @for (int i=0; i<shops.Count; i++)
+    {
+       @: this is The static text 
+        Shop s = shops[i];
+        <p> id : @s.Id Name : @s.Name Ifttah: @GetAge(s.startDate) years ago</p>
+    }
+
 
     </body>
 </html>
