@@ -1,5 +1,6 @@
 ﻿@using _08RazorViews.Models
 @{
+    @model Shop
     string title = "Wellcome to razore views is Asp.Net core ";
     Shop shop = new Shop()
             {
@@ -60,6 +61,8 @@
     <head>
         <meta charset="utf-8" />
         <title>@title</title>
+        <link href="~/birthdaycardstyle.scss" rel="stylesheet" />
+    <link href="~/style.css" rel="stylesheet" />
     </head>
     <body>
         @Html.Raw(alertMessage);
@@ -106,7 +109,24 @@
         Shop s = shops[i];
         <p> id : @s.Id Name : @s.Name Ifttah: @GetAge(s.startDate) years ago</p>
     }
+    <h1>The data view </h1>
+    <p class="hy">The data view is a dictionary type object .
+        that is used to send the data from controller to view in the asp.net core  . 
+        like we want to send some variable data in the view from controller we used the 
+        dataview object that is avialble in every controller class .
 
+    </p>
+    <p>@ViewData["name"]</p>
+    <h1>View Bage </h1>
+    <p>The ViewBag is used for the get the data from the dataview and its not need to convert it into the type 
+        we can used it as it as we declair in the controller and access the data by same name in the view by ViewBag 
+        like we send a list of persons class object type and we access it in the view its necdessarty to convert it into
+        the list type and stor in the variable in view but the use of the viewBag we directly used this in this </p>
+    <p>@ViewBag.name</p>
+
+    <h1>strongly type Views </h1>
+    <p>We can bind the controller object or variables with view in this view </p>
+    <p>@Model.Name</p>
 
     </body>
 </html>

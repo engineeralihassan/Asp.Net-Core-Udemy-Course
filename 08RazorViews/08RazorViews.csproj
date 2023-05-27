@@ -7,8 +7,4 @@
     <RootNamespace>_08RazorViews</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\" />
-  </ItemGroup>
-
 </Project>
