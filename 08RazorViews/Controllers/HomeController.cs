@@ -11,6 +11,7 @@ namespace _08RazorViews.Controllers
             string name = "Ali Hassan";
             // ViewData["name"] = "View Data In Asp.net core Mvc";
             return View(name); // by defuault Views/Home/index.cshtml
+
         }
     }
 }
