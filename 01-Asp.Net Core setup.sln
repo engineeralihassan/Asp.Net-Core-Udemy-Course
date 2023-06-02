@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06-ModelBinding_Validations
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07-ModelValidations", "07-ModelValidations\07-ModelValidations.csproj", "{E0E8B936-1287-4051-8CF7-1426DA483B3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08RazorViews", "08RazorViews\08RazorViews.csproj", "{E7F06E1D-50E9-407A-8AFD-81D6CAC9DEEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08RazorViews", "08RazorViews\08RazorViews.csproj", "{E7F06E1D-50E9-407A-8AFD-81D6CAC9DEEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09-LayoutViews", "09-LayoutViews\09-LayoutViews.csproj", "{DD6B691D-2FFB-4BDF-88DC-8993ADD54CAC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{E7F06E1D-50E9-407A-8AFD-81D6CAC9DEEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7F06E1D-50E9-407A-8AFD-81D6CAC9DEEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7F06E1D-50E9-407A-8AFD-81D6CAC9DEEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD6B691D-2FFB-4BDF-88DC-8993ADD54CAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD6B691D-2FFB-4BDF-88DC-8993ADD54CAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD6B691D-2FFB-4BDF-88DC-8993ADD54CAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD6B691D-2FFB-4BDF-88DC-8993ADD54CAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

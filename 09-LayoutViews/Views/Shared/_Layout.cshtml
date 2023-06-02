@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title> Asp.net Core layout views app</title>
+    <link href="~/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-brand">Asp.net layout Views</div>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/about">Home</a></li>
+                <li><a href="/contact">Home</a></li>
+                <li><a href="/products">Home</a></li>
+                <li><a href="/sellers">Home</a></li>
+                <li><a href="/orders">Home</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="page-content">
+        @RenderBody()
+    </div>
+</body>
+</html>
