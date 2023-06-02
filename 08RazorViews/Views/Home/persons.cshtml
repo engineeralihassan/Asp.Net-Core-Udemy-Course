@@ -1,0 +1,40 @@
+﻿@*@using _08RazorViews.Models*@
+@model WrapperModel
+@{
+    string title = "Wellcome to the details page";
+}
+<!Doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@title</title>
+    <link href="~/birthdaycardstyle.scss" rel="stylesheet" />
+    <link href="~/style.css" rel="stylesheet" />
+</head>
+<body>
+     <h1>Wellcome to Details pages</h1>
+     <p>some times we want to see the more then one
+         models data in one view in .net cote so we can do this in this component </p>
+         <p>Its not possibally true but we can make a wrapper class and do this is asp.net </p>
+
+
+         <h2>Shops class Data</h2>
+         <table>
+             <tbody>
+            <tr>  <th>Id </th> <th>Name</th> <th>Description</th> </tr>
+            <tr><td>@Model.shopproperty.Id</td><td>@Model.shopproperty.Name</td><td>@Model.shopproperty.Description</td></tr>
+                 
+             </tbody>
+         </table>
+         <h2>Persons class data</h2>
+    <table>
+        <tbody>
+            <tr>  <th>Id </th> <th>Name</th> <th>Description</th> </tr>
+            <tr><td>@Model.personproperty.Id</td><td>@Model.personproperty.Name</td><td>@Model.personproperty.Description</td></tr>
+
+        </tbody>
+    </table>
+    <a href="/aslam">Go to Shared View </a>
+</body>
+</html>
+
